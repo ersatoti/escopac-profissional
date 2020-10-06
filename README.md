@@ -12,3 +12,11 @@ mvn install
 
 # Configurações
 Os parâmetros da aplicação estão presentes em [application.properties](./src/main/resources/application.properties)
+
+# Run appliction docker
+
+mvn clean package
+mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
+
+Run with docker-compose
+docker-compose build && docker-compose up
